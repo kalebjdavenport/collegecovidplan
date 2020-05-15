@@ -1,4 +1,5 @@
-export { Card } from "./Card"
+export { Navbar } from "./Navbar"
+export { CollegeSearch } from "./CollegeSearch"
 export { Cards } from "./Cards"
 export { Feature } from "./Feature"
 export { Footer } from "./Footer"

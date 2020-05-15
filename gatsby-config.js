@@ -1,15 +1,16 @@
 require("dotenv").config()
 
+console.log("YAAYYYY!", process.env.AIRTABLE_BASE_ID)
+
 module.exports = {
   siteMetadata: {
     links: {
-      contact: "mailto:contact@me.com",
-      facebook: "https://www.facebook.com",
+      contact: "mailto:collegecovidplan@gmail.com",
       linkedin: "https://www.linkedin.com",
       twitter: "https://www.twitter.com",
     },
     locale: "en",
-    title: "Travel destinations",
+    title: "College Covid Plan",
   },
   plugins: [
     {
@@ -47,6 +48,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
@@ -54,7 +63,7 @@ module.exports = {
           {
             baseId: process.env.AIRTABLE_BASE_ID,
             tableName: process.env.AIRTABLE_TABLE_NAME,
-            mapping: { image: "fileNode" },
+            // mapping: { image: "fileNode" },
           },
         ],
       },
@@ -69,6 +78,12 @@ module.exports = {
         theme_color: `#4299e1`,
         display: `standalone`,
         icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-typography",
+      options: {
+        pathToConfigModule: "src/utils/typography.js",
       },
     },
     {

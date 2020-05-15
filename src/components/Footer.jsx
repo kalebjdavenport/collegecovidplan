@@ -1,11 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import React from "react"
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa"
+import { FaEnvelope, FaLinkedinIn, FaTwitter } from "react-icons/fa"
 
 export const Footer = () => {
   const {
@@ -18,7 +13,6 @@ export const Footer = () => {
         meta: siteMetadata {
           links {
             contact
-            facebook
             linkedin
             twitter
           }
@@ -28,14 +22,14 @@ export const Footer = () => {
   `)
 
   return (
-    <footer className="bg-white">
-      <div className="container pt-12 pb-12 flex flex-wrap text-center lg:flex-row-reverse lg:justify-between lg:items-center">
+    <footer className="pt-16 border-t border-gray-300 bg-white">
+      <h3 className="container text-xl flex lg:text-2xl font-bold text-ruby-400 tracking-tight leading-normal">
+        <Link className="border-b-2 border-transparent hover:border-ruby-400">
+          Let us know what else you are searching for.
+        </Link>
+      </h3>
+      <div className="container pt-6 pb-12 flex flex-wrap text-center lg:flex-row-reverse lg:justify-between lg:items-center">
         <ul className="w-full lg:w-auto">
-          <FooterIconLink
-            href={links.facebook}
-            icon={FaFacebookF}
-            label="Facebook"
-          />
           <FooterIconLink
             href={links.twitter}
             icon={FaTwitter}
@@ -52,8 +46,9 @@ export const Footer = () => {
             label="E-mail"
           />
         </ul>
-        <div className="w-full lg:w-auto pt-6 lg:pt-0 text-blue-800 text-sm">
-          &copy; 2020 All rights reserved.
+        <div className="w-full lg:w-auto pt-6 text-sm text-ruby-800 lg:pt-0">
+          <span className="pr-2">Copywright &copy; 2020 Brainstorm Inc.</span>{" "}
+          All rights reserved.
         </div>
       </div>
     </footer>
@@ -72,7 +67,7 @@ const FooterIconLink = ({ href, label, icon: Icon }) => {
     <li className="inline-block px-2">
       <a
         {...linkParams}
-        className="inline-flex h-8 w-8 border border-blue-800 text-blue-800 rounded-full items-center justify-center transition-colors duration-200 hover:text-white hover:bg-blue-400 hover:border-blue-400"
+        className="inline-flex h-8 w-8 border border-ruby-800 text-ruby-800 rounded-full items-center justify-center transition-colors duration-200 hover:text-white hover:bg-ruby-400 hover:border-ruby-400"
       >
         <span className="sr-only">{label}</span>
         <Icon className="w-3 h-3 fill-current" />

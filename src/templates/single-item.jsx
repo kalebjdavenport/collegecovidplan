@@ -1,29 +1,29 @@
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import React from "react"
-import { Feature, SiteMetadata } from "../components"
-import { useModal } from "../context"
+// import { Feature, SiteMetadata } from "../components"
+// import { useModal } from "../context"
 import { Layout } from "../layouts/Layout"
 
 export default props => {
-  const { data, location } = props
-  const {
-    country,
-    description,
-    image: {
-      localFiles: [cover],
-    },
-    name,
-    summary,
-    tags,
-    url,
-  } = data.item.data
-  const navigation = location.state ? location.state.navigation : null
-  const { modal } = useModal()
+  console.log(props)
+  // const {
+  //   country,
+  //   description,
+  //   image: {
+  //     localFiles: [cover],
+  //   },
+  //   name,
+  //   summary,
+  //   tags,
+  //   url,
+  // } = data.item.data
+  // const navigation = location.state ? location.state.navigation : null
+  // const { modal } = useModal()
 
   return (
-    <Layout navigation={navigation}>
-      <SiteMetadata title={name} description={summary} image={cover.url} />
+    <Layout>
+      {/* <SiteMetadata title={name} description={summary} image={cover.url} />
       <article className={modal && "max-h-80vh md:max-h-90vh overflow-auto"}>
         <div className={modal ? "p-4 lg:p-8" : "container py-8"}>
           <h1 className="text-2xl lg:text-3xl text-blue-500 font-bold leading-tight">
@@ -46,7 +46,7 @@ export default props => {
             </div>
           </div>
         </div>
-      </article>
+      </article> */}
     </Layout>
   )
 }
@@ -55,23 +55,23 @@ export const query = graphql`
   query SingleItemQuery($slug: String!) {
     item: airtable(data: { slug: { eq: $slug } }) {
       data {
-        country
-        description
-        name
-        image {
-          localFiles {
-            url: publicURL
-            childImageSharp {
-              fluid(maxWidth: 733, maxHeight: 480, cropFocus: NORTH) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
+        State
+        County
+        Type
+        # image {
+        #   localFiles {
+        #     url: publicURL
+        #     childImageSharp {
+        #       fluid(maxWidth: 733, maxHeight: 480, cropFocus: NORTH) {
+        #         ...GatsbyImageSharpFluid_withWebp
+        #       }
+        #     }
+        #   }
+        # }
         slug
-        summary
-        tags
-        url
+        # summary
+        # tags
+        # url
       }
     }
   }

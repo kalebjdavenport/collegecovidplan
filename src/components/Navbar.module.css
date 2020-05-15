@@ -1,0 +1,40 @@
+.mainNav {
+  height: 10vh;
+  border-bottom: 1.5px solid #3b2c35;
+}
+.btn {
+  height: 10vh;
+  color: #161923;
+  padding: 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #3b2c35;
+  border-top: 4px solid #fff;
+  padding-bottom: 2px;
+}
+.searchBtn {
+  font-size: 2rem;
+  color: #fff;
+  height: calc(10vh - 2px);
+  width: calc(10vh - 2px);
+  background-color: #474056;
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s;
+}
+.searchBtn:hover {
+  font-size: 1.95rem;
+  color: #fff;
+  background-color: #3b2c35;
+  border: 3px solid #fff;
+}

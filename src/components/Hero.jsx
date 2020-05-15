@@ -9,7 +9,7 @@ export const Hero = props => {
   return (
     <div className="container mt-12">
       <div className="flex relative rounded-md overflow-hidden bg-blue-400">
-        <Img
+        {/* <Img
           alt={title}
           className="grayscale-1 blend-multiply"
           fadeIn={false}
@@ -17,7 +17,7 @@ export const Hero = props => {
             { ...image.childImageSharp.desktop, media: `(min-width: 768px)` },
             { ...image.childImageSharp.mobile, media: `(max-width: 767px)` },
           ]}
-        />
+        /> */}
 
         <div
           className="absolute inset-0"
@@ -55,16 +55,16 @@ Hero.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export const query = graphql`
-  fragment HeroImageFragment on File {
-    url: publicURL
-    childImageSharp {
-      mobile: fixed(width: 768, height: 240, quality: 80, cropFocus: CENTER) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-      desktop: fixed(width: 1248, height: 280, quality: 85, cropFocus: SOUTH) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   fragment HeroImageFragment on File {
+//     url: publicURL
+//     childImageSharp {
+//       mobile: fixed(width: 768, height: 240, quality: 80, cropFocus: CENTER) {
+//         ...GatsbyImageSharpFixed_withWebp
+//       }
+//       desktop: fixed(width: 1248, height: 280, quality: 85, cropFocus: SOUTH) {
+//         ...GatsbyImageSharpFixed_withWebp
+//       }
+//     }
+//   }
+// `
