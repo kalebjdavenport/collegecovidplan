@@ -1,52 +1,47 @@
 import { graphql } from "gatsby"
 // import Img from "gatsby-image"
 import React from "react"
-// import { Feature, SiteMetadata } from "../components"
-// import { useModal } from "../context"
+import { Feature, SiteMetadata } from "../components"
 import { Layout } from "../layouts/Layout"
 
 export default props => {
-  console.log(props)
-  // const {
-  //   country,
-  //   description,
-  //   image: {
-  //     localFiles: [cover],
-  //   },
-  //   name,
-  //   summary,
-  //   tags,
-  //   url,
-  // } = data.item.data
-  // const navigation = location.state ? location.state.navigation : null
-  // const { modal } = useModal()
+  console.log("Is this working?", props)
+  const {
+    State,
+    County,
+    Type,
+    College_University: college,
+    // image: {
+    //   localFiles: [cover],
+    // },
+    Website,
+  } = props.data.item.data
 
   return (
     <Layout>
-      {/* <SiteMetadata title={name} description={summary} image={cover.url} />
-      <article className={modal && "max-h-80vh md:max-h-90vh overflow-auto"}>
-        <div className={modal ? "p-4 lg:p-8" : "container py-8"}>
+      <SiteMetadata title={college} description={Website} />
+      <article>
+        <div className="container py-8">
           <h1 className="text-2xl lg:text-3xl text-blue-500 font-bold leading-tight">
-            {name}
+            {college}
           </h1>
           <p className="text-base lg:text-lg text-blue-800 font-medium mb-4">
-            {summary}
+            {State}
           </p>
           <div className="flex flex-wrap">
-            <div className="w-full pb-4 lg:w-3/5 lg:pr-4 lg:pb-0">
+            {/* <div className="w-full pb-4 lg:w-3/5 lg:pr-4 lg:pb-0">
               <Img fluid={cover.childImageSharp.fluid} alt={name} />
-            </div>
+            </div> */}
             <div className="w-full lg:w-2/5 lg:pl-4">
-              <Feature label="Country" value={country} />
-              <Feature label="What to see?" value={tags} />
-              <Feature label="More info" value={url} />
-              <p className="mt-4 whitespace-pre-line text-sm lg:text-base leading-normal text-blue-900">
-                {description}
-              </p>
+              <Feature label="County" value={County} />
+              <Feature label="School Type" value={Type} />
+              <a className="mt-4 whitespace-pre-line text-sm lg:text-base leading-normal text-blue-900">
+                <Feature label="Official WebsiteP" value={Website} />
+              </a>
             </div>
           </div>
         </div>
-      </article> */}
+      </article>
     </Layout>
   )
 }
@@ -58,6 +53,8 @@ export const query = graphql`
         State
         County
         Type
+        College_University
+        Website
         # image {
         #   localFiles {
         #     url: publicURL

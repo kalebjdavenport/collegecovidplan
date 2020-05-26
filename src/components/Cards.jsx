@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { navigate } from "gatsby"
 
 export const Cards = props => {
   const { nodes } = props
@@ -10,18 +11,29 @@ export const Cards = props => {
         <thead>
           <tr>
             <th class="pr-0 py-2 text-center">State</th>
+            <th class="px-4 py-2 text-center">College/University</th>
             <th class="px-4 py-2">County</th>
             <th class="px-4 py-2">Type</th>
           </tr>
         </thead>
         <tbody>
           {nodes.map((item, i) => {
-            const { State, County, Type, slug } = item.data
+            const { State, County, Type, College_University, slug } = item.data
             return (
-              <tr key={i}>
-                <td class="border py-2 text-center">{State}</td>
+              <tr
+                class="table-auto hover:bg-blush cursor-pointer"
+                onClick={() => navigate(`/${slug}/`)}
+                key={i}
+              >
+                <td class="border px-2 py-2 text-center">{State}</td>
+
+                <td class="border px-4 py-2 text-center">
+                  {College_University}
+                </td>
+
                 <td class="border px-4 py-2">{County}</td>
-                <td class="border px-4 py-2">{Type}</td>
+
+                <td class="border px-4 py-2">{Type !== "#N/A" ? Type : " "}</td>
               </tr>
             )
           })}

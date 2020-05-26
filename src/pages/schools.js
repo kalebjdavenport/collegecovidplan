@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styles from "./index.module.css"
-import { Cards, Hero, SiteMetadata, CollegeSearch } from "../components"
+import { Cards, SiteMetadata } from "../components"
 import { Layout } from "../layouts/Layout"
 
 export default ({ data }) => {
@@ -13,12 +12,9 @@ export default ({ data }) => {
         // image={data.hero.url}
       />
 
-      <div className="flex h-90">
-        <div className={styles.leftCol}>
-          <CollegeSearch />
-        </div>
-        <div className="flex-1 overflow-hidden">
-          <div className="w-full h-full overflow-hidden"></div>
+      <div className="container">
+        <div className="flex-1">
+          <Cards nodes={data.items.nodes} />
         </div>
       </div>
       {/* <Hero
@@ -31,13 +27,14 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query IndexQuery($tableName: String!) {
+  query SchoolsQuery($tableName: String!) {
     # hero: file(relativePath: { eq: "hero-travel.jpg" }) {
     #   ...HeroImageFragment
     # }
     items: allAirtable(filter: { table: { eq: $tableName } }) {
       nodes {
         data {
+          College_University
           State
           County
           Type
