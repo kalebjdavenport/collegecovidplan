@@ -12,7 +12,7 @@ export default ({ data }) => {
         // image={data.hero.url}
       />
 
-      <div className="container">
+      <div>
         <div className="flex-1">
           <Cards nodes={data.items.nodes} />
         </div>

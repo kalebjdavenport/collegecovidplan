@@ -1,22 +1,33 @@
 require("dotenv").config()
 
-console.log("YAAYYYY!", process.env.AIRTABLE_BASE_ID)
+const queries = require("./src/utils/algolia")
 
 module.exports = {
   siteMetadata: {
     links: {
       contact: "mailto:collegecovidplan@gmail.com",
-      linkedin: "https://www.linkedin.com",
       twitter: "https://www.twitter.com",
     },
     locale: "en",
     title: "College Covid Plan",
+    titleTemplate: "%s · College Covid Plan",
+    description:
+      "Community directory college and university plans for the summer and fall given the present coronavirus (covid-19) situation.",
   },
   plugins: [
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        queries,
+        indexName: "dev_collegeCovid",
       },
     },
     `gatsby-plugin-react-helmet`,

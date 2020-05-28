@@ -1,0 +1,14 @@
+.visit {
+  position: absolute;
+  background-color: #f4ccd1;
+  padding: 1rem 2rem 1rem 2rem;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 0;
+  transition: left 0.3s;
+}
+
+.link:hover + .visit {
+  left: 0;
+}

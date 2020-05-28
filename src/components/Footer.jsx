@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import React from "react"
-import { FaEnvelope, FaLinkedinIn, FaTwitter } from "react-icons/fa"
+import { FaEnvelope, FaTwitter } from "react-icons/fa"
 
 export const Footer = () => {
   const {
@@ -13,7 +13,6 @@ export const Footer = () => {
         meta: siteMetadata {
           links {
             contact
-            linkedin
             twitter
           }
         }
@@ -34,11 +33,6 @@ export const Footer = () => {
             href={links.twitter}
             icon={FaTwitter}
             label="Twitter"
-          />
-          <FooterIconLink
-            href={links.linkedin}
-            icon={FaLinkedinIn}
-            label="LinkedIn"
           />
           <FooterIconLink
             href={links.contact}

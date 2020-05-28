@@ -1,0 +1,10 @@
+.item:before {
+  content: "—";
+  padding-right: 0.5rem;
+  padding-left: calc(2vh + 2.25rem);
+}
+
+.link:hover {
+  color: #161923;
+  border-bottom: 1px solid #161923;
+}

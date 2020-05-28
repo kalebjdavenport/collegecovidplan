@@ -1,0 +1,22 @@
+.input {
+  height: calc(10vh - 1px);
+  text-align: center;
+}
+
+.searchBtn {
+  font-size: 2rem;
+  height: calc(10vh - 2px);
+  width: calc(10vh - 2px);
+  color: #918b9a;
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s;
+}
+
+.searchBtn:hover {
+  color: #161923;
+}
