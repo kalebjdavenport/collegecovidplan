@@ -26,7 +26,6 @@ const queries = [
     query: collegeQuery,
     transformer: ({ data }) =>
       data.items.nodes.map(({ data }) => {
-        console.log(data)
         return data
       }),
   },
