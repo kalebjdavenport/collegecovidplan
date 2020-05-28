@@ -7,6 +7,7 @@ const CollegeResultsSearch = ({ hit: { College_University, id } }) => (
     <div className="flex flex-row relative overflow-hidden">
       <Link
         to={`${id}`}
+        // onClick={() => setNavSearch(false)}
         className={
           "text-lg z-10 font-bold px-4 py-1 text-coffee-400 border border-transparent " +
           styles.link

@@ -55,8 +55,10 @@ export default props => {
             {/* <div className="w-full pb-4 lg:w-3/5 lg:pr-4 lg:pb-0">
               <Img fluid={cover.childImageSharp.fluid} alt={name} />
             </div> */}
+
             <div className="w-full lg:w-2/5 lg:pl-4">
               <Feature label="County" value={County} />
+              {State && <Feature label="State" value={State} />}
               {Type !== "#N/A" && (
                 <Feature
                   label="School Type"

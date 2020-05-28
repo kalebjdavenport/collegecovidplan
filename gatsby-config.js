@@ -82,8 +82,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Travel Destinations`,
-        short_name: `Travel Destinations`,
+        name: `College Covid Plan`,
+        short_name: `College Covid Plan`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#4299e1`,

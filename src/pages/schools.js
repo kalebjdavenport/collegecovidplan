@@ -17,11 +17,6 @@ export default ({ data }) => {
           <Cards nodes={data.items.nodes} />
         </div>
       </div>
-      {/* <Hero
-        tag="#travel"
-        title="Travel destinations"
-        description="Check the most popular travel locations in Europe."
-      /> */}
     </Layout>
   )
 }
