@@ -9,8 +9,8 @@ export default () => {
   return (
     <Layout>
       <SiteMetadata
-        title="Travel destinations"
-        description="Check the most popular travel destinations in Europe."
+        title="Find your school."
+        description="Get information about the fall plans for your university."
       />
 
       <div className="flex h-90">
