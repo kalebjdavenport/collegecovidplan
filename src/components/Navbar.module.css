@@ -1,6 +1,6 @@
 .mainNav {
   height: 10vh;
-  border-bottom: 1.5px solid #3b2c35;
+  border-bottom: 1px solid #3b2c35;
 }
 .btn {
   height: 10vh;
@@ -21,8 +21,8 @@
 .searchBtn {
   font-size: 2rem;
   color: #fff;
-  height: calc(10vh - 2px);
-  width: calc(10vh - 2px);
+  height: calc(10vh - 1px);
+  width: calc(10vh - 1px);
   background-color: #474056;
   padding: 0.5rem;
   display: flex;

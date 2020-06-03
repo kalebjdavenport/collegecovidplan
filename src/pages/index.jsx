@@ -21,7 +21,10 @@ export default () => {
           <h1 className="text-2xl text-center m-4 font-bold lg:pt-24 pb-4">
             College plans for fall semester so far.
           </h1>
-          <div id="pie-container" className="m-auto min-w-3/4 w-full h-full">
+          <div
+            id="pie-container"
+            className="m-auto min-w-3/4 w-full h-32 lg:h-full"
+          >
             <Helmet>
               <script src={withPrefix("script.js")} suspend></script>
             </Helmet>
