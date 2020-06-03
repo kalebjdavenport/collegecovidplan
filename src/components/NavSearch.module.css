@@ -2,6 +2,10 @@
   height: calc(10vh - 1px);
   text-align: center;
 }
+.input:focus {
+  height: calc(10vh - 1px);
+  outline-offset: 0;
+}
 
 .searchBtn {
   font-size: 2rem;

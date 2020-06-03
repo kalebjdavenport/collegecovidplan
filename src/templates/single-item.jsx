@@ -39,8 +39,20 @@ export default props => {
     SStatus,
     FSstatus,
     FSNote,
-    FSsource,
+    FSource,
+    FTuition,
+    Housing,
+    HNote,
+    HSsource,
+    Office,
+    ONote,
+    OSource,
     Campus,
+    CNote,
+    CSource,
+    Sport,
+    SNote,
+    SSource,
   } = props.data.item.data
 
   return (
@@ -65,9 +77,7 @@ export default props => {
                   value={Type === "PrivNp" ? "Private" : Type}
                 />
               )}
-              <a className="mt-4 whitespace-pre-line text-sm lg:text-base leading-normal text-blue-900">
-                <Feature label="Official WebsiteP" value={Website} />
-              </a>
+              <Feature label="Official WebsiteP" value={Website} />
             </div>
             <div className="w-full lg:w-3/5 lg:pl-4">
               {SStatus === "o" ? (
@@ -79,6 +89,7 @@ export default props => {
                 label="Fall Plans"
                 value={GenerateFSStatusDesc(FSstatus)}
               />
+              {FSource && <Feature label="Source" value={FSource} />}
             </div>
             {FSNote && (
               <div className="w-full lg:pl-4 mb-2">
@@ -107,21 +118,23 @@ export const query = graphql`
         Type
         College_University
         Website
-        # image {
-        #   localFiles {
-        #     url: publicURL
-        #     childImageSharp {
-        #       fluid(maxWidth: 733, maxHeight: 480, cropFocus: NORTH) {
-        #         ...GatsbyImageSharpFluid_withWebp
-        #       }
-        #     }
-        #   }
-        # }
         SStatus
         FSstatus
         FSNote
-        FSsource
+        FSource
+        FTuition
+        Housing
+        HNote
+        HSource
+        Office
+        ONote
+        OSource
         Campus
+        CNote
+        CSource
+        Sport
+        SNote
+        SSource
       }
     }
   }

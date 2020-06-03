@@ -5,7 +5,7 @@ export const Feature = ({ label, value }) => {
   if (typeof value === "string") {
     if (value.startsWith("http") || value.startsWith("mailto")) {
       value = (
-        <div className="truncate">
+        <div>
           <a
             href={value}
             target="_blank"
@@ -17,7 +17,7 @@ export const Feature = ({ label, value }) => {
         </div>
       )
     } else {
-      value = <div className="truncate">{value}</div>
+      value = <div>{value}</div>
     }
   } else if (Array.isArray(value)) {
     value = value.map((item, i) => (
@@ -29,12 +29,12 @@ export const Feature = ({ label, value }) => {
 
   return (
     <>
-      <h4 className="text-coffee-800 uppercase text-xxs tracking-wide font-medium pb-px">
+      <h4 className="text-coffee-800 uppercase text-xxs tracking-wide font-medium py-1">
         {label}
       </h4>
 
       <div
-        className={`font-medium text-coffee-400 text-base leading-loose mb-4`}
+        className={`font-medium text-coffee-400 text-base leading-relaxed mb-4`}
       >
         {value}
       </div>
