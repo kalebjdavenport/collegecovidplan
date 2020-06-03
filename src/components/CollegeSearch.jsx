@@ -19,7 +19,7 @@ const HomeSearchBox = ({ currentRefinement, refine }) => (
     <input
       type="search"
       className={
-        "w-full bg-white text-lg focus:outline-none border border-gray-400 rounded-md block appearance-none leading-normal placeholder-gray-900 " +
+        "w-full bg-white text-sm lg:text-lg focus:outline-none border border-gray-400 rounded-md block appearance-none leading-normal placeholder-gray-900 " +
         styles.input
       }
       placeholder="Ohio State University"

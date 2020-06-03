@@ -1,16 +1,18 @@
 var svg = d3
   .select("#pie-container")
   .append("svg")
-  .classed("h-full w-full", true)
+  .classed("h-full w-3/4 m-auto block", true)
   .append("g")
 
 svg.append("g").attr("class", "slices")
 svg.append("g").attr("class", "labels")
 svg.append("g").attr("class", "lines")
 
-var width = 880,
-  height = 405,
+var width = (window.innerWidth + window.innerHeight) / 2.5,
+  height = window.innerWidth / 3.4,
   radius = Math.min(width, height) / 2
+
+console.log(width)
 
 var pie = d3.layout
   .pie()
@@ -29,7 +31,9 @@ var outerArc = d3.svg
   .innerRadius(radius * 0.9)
   .outerRadius(radius * 0.9)
 
-svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+const widthTranslation = width > 500 ? width / 2.8 : width / 2.9
+
+svg.attr("transform", "translate(" + widthTranslation + "," + height / 2 + ")")
 
 var key = function(d) {
   return d.data.label

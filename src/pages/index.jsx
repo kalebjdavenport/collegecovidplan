@@ -18,10 +18,10 @@ export default () => {
           <CollegeSearch />
         </div>
         <div className="flex-1 flex flex-col items-center">
-          <h1 className="text-2xl m-4 font-bold pt-24 pb-4">
+          <h1 className="text-2xl text-center m-4 font-bold lg:pt-24 pb-4">
             College plans for fall semester so far.
           </h1>
-          <div id="pie-container" className="w-full h-full">
+          <div id="pie-container" className="m-auto min-w-3/4 w-full h-full">
             <Helmet>
               <script src={withPrefix("script.js")} suspend></script>
             </Helmet>

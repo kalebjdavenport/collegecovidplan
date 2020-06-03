@@ -5,6 +5,9 @@ module.exports = {
       center: true,
       padding: "1.25rem",
     },
+    minWidth: {
+      "3/4": "75%",
+    },
     extend: {
       fontSize: {
         xxs: "0.625rem",

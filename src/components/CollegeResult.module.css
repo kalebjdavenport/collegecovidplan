@@ -6,7 +6,7 @@
 
 @media only screen and (max-width: 640px) {
   .item:before {
-    padding-left: 1.5rem;
+    padding-left: 0.1rem;
   }
 }
 

@@ -6,7 +6,9 @@ const CollegeResults = ({ hit: { College_University, id } }) => (
   <div className={"flex items-start " + styles.item}>
     <Link
       to={`/${id}`}
-      className={"text-md text-eblue border border-transparent " + styles.link}
+      className={
+        "text-sm lg:text-md text-eblue border border-transparent " + styles.link
+      }
     >
       {College_University.length > 33
         ? `${College_University.substring(0, 30)}...`
