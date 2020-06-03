@@ -28,7 +28,7 @@ export const Footer = () => {
         </Link>
       </h3>
       <div className="container pt-6 pb-12 flex flex-wrap text-center lg:flex-row-reverse lg:justify-between lg:items-center">
-        <ul className="w-full lg:w-auto">
+        <ul className="lg:w-auto">
           <FooterIconLink
             href={links.twitter}
             icon={FaTwitter}
@@ -40,7 +40,7 @@ export const Footer = () => {
             label="E-mail"
           />
         </ul>
-        <div className="w-full lg:w-auto pt-6 text-sm text-ruby-800 lg:pt-0">
+        <div className="lg:w-auto pt-6 text-sm text-ruby-800 lg:pt-0">
           <span className="pr-2">Copywright &copy; 2020 Brainstorm Inc.</span>{" "}
           All rights reserved.
         </div>

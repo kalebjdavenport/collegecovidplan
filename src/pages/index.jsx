@@ -13,12 +13,12 @@ export default () => {
         description="Get information about the fall plans for your university."
       />
 
-      <div className="flex h-90">
+      <div className="flex flex-col lg:flex-row lg:h-90">
         <div className={styles.leftCol}>
           <CollegeSearch />
         </div>
         <div className="flex-1 flex flex-col items-center">
-          <h1 className="text-2xl font-bold pt-24 pb-4">
+          <h1 className="text-2xl m-4 font-bold pt-24 pb-4">
             College plans for fall semester so far.
           </h1>
           <div id="pie-container" className="w-full h-full">

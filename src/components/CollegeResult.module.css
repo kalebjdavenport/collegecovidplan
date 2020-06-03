@@ -4,6 +4,12 @@
   padding-left: calc(2vh + 2.25rem);
 }
 
+@media only screen and (max-width: 640px) {
+  .item:before {
+    padding-left: 1.5rem;
+  }
+}
+
 .link:hover {
   color: #161923;
   border-bottom: 1px solid #161923;

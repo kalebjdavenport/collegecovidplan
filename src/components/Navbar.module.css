@@ -48,3 +48,9 @@
   width: calc(100% + 2px);
   border-left: 1.5px solid #3b2c35;
 }
+
+@media only screen and (min-width: 640px) {
+  .searchPanel {
+    width: 40%;
+  }
+}

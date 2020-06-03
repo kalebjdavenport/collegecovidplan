@@ -53,7 +53,7 @@ const HomeSearchBox = ({ currentRefinement, refine, setNavSearch }) => {
 const CustomSearchBox = connectSearchBox(HomeSearchBox)
 
 const Hits = ({ hits, setNavSearch }) => (
-  <ul class="pt-8 mx-16 border-t-2 border-gray-200">
+  <ul class="pt-8 lg:mx-16 mx-10 border-t-2 border-gray-200">
     {hits.slice(0, 10).map(hit => (
       <li key={hit.id}>
         <CollegeResultSearch setNavSearch={setNavSearch} hit={hit} />
@@ -69,7 +69,7 @@ export const NavSearch = (props, ref) => {
     <div className="flex flex-col items-center text-center h-full">
       <div className="flex w-full justify-center">
         <InstantSearch searchClient={searchClient} indexName="dev_collegeCovid">
-          <div className="relative w-full h-full">
+          <div className="w-full h-full">
             <CustomSearchBox ref={ref} setNavSearch={props.setNavSearch} />
             <CustomHits />
           </div>
