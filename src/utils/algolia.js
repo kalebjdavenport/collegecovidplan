@@ -15,7 +15,7 @@ const collegeQuery = `{
         SStatus
         FSstatus
         FSNote
-        FSsource
+        FSource
         Campus
       }
     }

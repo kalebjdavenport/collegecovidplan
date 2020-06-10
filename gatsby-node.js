@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
         reject(errors)
       }
 
-      const component = path.resolve(`./src/templates/single-item.jsx`)
+      const component = path.resolve(`./src/templates/single-college.jsx`)
 
       data.allAirtable.nodes.map(({ data: { slug } }) => {
         createPage({
