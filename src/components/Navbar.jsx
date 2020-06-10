@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Icon from "../assets/college-covid-plan-logo.svg"
 import styles from "./Navbar.module.css"
 import { Link } from "gatsby"
@@ -36,14 +36,14 @@ export const Navbar = ({ setNavSearch, navSearch }) => {
               </Link>
             </li>
             <li className={"m-0 h-full"}>
-              <div
+              <button
                 onClick={() => {
                   setNavSearch(true)
                 }}
                 className={styles.searchBtn}
               >
                 <IoIosSearch />
-              </div>
+              </button>
             </li>
           </ul>
         </div>

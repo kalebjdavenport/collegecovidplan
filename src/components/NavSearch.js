@@ -30,6 +30,7 @@ const HomeSearchBox = ({ currentRefinement, refine, setNavSearch }) => {
     >
       <input
         type="search"
+        aria-label="School search"
         autofocus="true"
         ref={searchRef}
         className={

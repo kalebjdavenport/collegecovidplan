@@ -23,7 +23,10 @@ export const Footer = () => {
   return (
     <footer className="pt-16 border-t border-gray-300 bg-white">
       <h3 className="container text-xl flex lg:text-2xl font-bold text-ruby-400 tracking-tight leading-normal">
-        <Link className="border-b-2 border-transparent hover:border-ruby-400">
+        <Link
+          to="/"
+          className="border-b-2 border-transparent hover:border-ruby-400"
+        >
           Let us know what else you are searching for.
         </Link>
       </h3>

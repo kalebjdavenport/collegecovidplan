@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        xxs: "0.625rem",
+        xxs: "0.6rem",
       },
       colors: {
         primary: "#161923",
@@ -27,8 +27,10 @@ module.exports = {
         blush: "#FFF7FC",
       },
       height: {
-        90: "90vh",
         "8vh": "8vh",
+      },
+      minHeight: {
+        90: "90vh",
       },
       maxHeight: {
         "48": "12rem",

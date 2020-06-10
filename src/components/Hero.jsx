@@ -1,10 +1,8 @@
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
 
 export const Hero = props => {
-  const { description, image, tag, title } = props
+  const { description, tag, title } = props
 
   return (
     <div className="container mt-12">

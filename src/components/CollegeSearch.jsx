@@ -18,6 +18,7 @@ const HomeSearchBox = ({ currentRefinement, refine }) => (
   <form className="relative" noValidate action="" role="search">
     <input
       type="search"
+      aria-label="Main College Search"
       className={
         "w-full bg-white text-sm lg:text-lg focus:outline-none border border-gray-400 rounded-md block appearance-none leading-normal placeholder-gray-900 " +
         styles.input

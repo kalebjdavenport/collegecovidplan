@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, withPrefix } from "gatsby"
 import styles from "./index.module.css"
-import { Cards, Hero, SiteMetadata, CollegeSearch } from "../components"
+import { SiteMetadata, CollegeSearch } from "../components"
 import { Layout } from "../layouts/Layout"
 import { Helmet } from "react-helmet"
 
@@ -13,7 +13,7 @@ export default () => {
         description="Get information about the fall plans for your university."
       />
 
-      <div className="flex flex-col lg:flex-row lg:h-90">
+      <div className="flex flex-col lg:flex-row lg:min-h-90">
         <div className={styles.leftCol}>
           <CollegeSearch />
         </div>
