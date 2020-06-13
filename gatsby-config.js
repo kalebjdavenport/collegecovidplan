@@ -12,7 +12,7 @@ module.exports = {
     title: "College Covid Plan",
     titleTemplate: "%s · College Covid Plan",
     description:
-      "Community directory college and university plans for the summer and fall given the present coronavirus (covid-19) situation.",
+      "Community directory college and university plans for the summer and fall updated for the present coronavirus (covid-19) pandemic.",
   },
   plugins: [
     {

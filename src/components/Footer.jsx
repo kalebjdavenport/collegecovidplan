@@ -23,12 +23,14 @@ export const Footer = () => {
   return (
     <footer className="pt-16 border-t border-gray-300 bg-white">
       <h3 className="container text-xl flex lg:text-2xl font-bold text-ruby-400 tracking-tight leading-normal">
-        <Link
-          to="/"
+        <a
+          href="https://forms.gle/RMsmkp3uUZ6adfju8"
+          target="_blank"
+          rel="noreferrer"
           className="border-b-2 border-transparent hover:border-ruby-400"
         >
           Let us know what else you are searching for.
-        </Link>
+        </a>
       </h3>
       <div className="container pt-6 pb-12 flex flex-wrap text-center lg:flex-row-reverse lg:justify-between lg:items-center">
         <ul className="lg:w-auto">

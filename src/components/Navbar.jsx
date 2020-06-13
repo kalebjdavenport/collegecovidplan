@@ -30,11 +30,11 @@ export const Navbar = ({ setNavSearch, navSearch }) => {
                 Sports
               </Link>
             </li> */}
-            <li className="m-0 h-full">
+            {/* <li className="m-0 h-full">
               <Link className={styles.btn} to="/schools/">
                 Schools
               </Link>
-            </li>
+            </li> */}
             <li className={"m-0 h-full"}>
               <button
                 onClick={() => {
