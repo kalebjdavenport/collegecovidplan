@@ -6,7 +6,6 @@ module.exports = {
   siteMetadata: {
     links: {
       contact: "mailto:collegecovidplan@gmail.com",
-      twitter: "https://www.twitter.com",
     },
     locale: "en",
     title: "College Covid Plan",

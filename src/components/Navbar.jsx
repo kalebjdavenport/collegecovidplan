@@ -29,8 +29,8 @@ export const Navbar = ({ setNavSearch, navSearch }) => {
               <Link className={styles.btn} to="/sports/">
                 Sports
               </Link>
-            </li> */}
-            {/* <li className="m-0 h-full">
+            </li>
+            <li className="m-0 h-full">
               <Link className={styles.btn} to="/schools/">
                 Schools
               </Link>

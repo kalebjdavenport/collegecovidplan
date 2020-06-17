@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import { Feature, SiteMetadata } from "../components"
 import { Layout } from "../layouts/Layout"
+import { CitationImage } from "../components/CitationImage"
 
 const GenerateFSStatusDesc = fstatus => {
   if (fstatus === "o") {
@@ -182,6 +183,7 @@ export default props => {
               </div>
             )}
           </div>
+          {FSstatus !== "o" && <CitationImage />}
         </div>
       </article>
     </Layout>

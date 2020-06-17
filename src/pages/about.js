@@ -1,21 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Cards, SiteMetadata } from "../components"
+import { SiteMetadata } from "../components"
 import { Layout } from "../layouts/Layout"
 
 export default ({ data }) => {
   return (
     <Layout>
       <SiteMetadata
-        title="College Covid Plan"
-        description="Find your school's plans for the fall."
-        // image={data.hero.url}
+        title="About College Covid Plan"
+        description="More than just a search tool."
       />
 
       <div>
-        <div className="flex-1">
-          <Cards nodes={data.items.nodes} />
-        </div>
+        <h1>Built by the team at Brainstorm.</h1>
       </div>
     </Layout>
   )
@@ -23,9 +20,6 @@ export default ({ data }) => {
 
 export const query = graphql`
   query SchoolsQuery($tableName: String!) {
-    # hero: file(relativePath: { eq: "hero-travel.jpg" }) {
-    #   ...HeroImageFragment
-    # }
     items: allAirtable(filter: { table: { eq: $tableName } }) {
       nodes {
         data {
