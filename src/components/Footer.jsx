@@ -40,7 +40,7 @@ export const Footer = () => {
           />
         </ul>
         <div className="lg:w-auto pt-6 text-sm text-ruby-800 lg:pt-0">
-          <span className="pr-2">Copywright &copy; 2020 Brainstorm Inc.</span>{" "}
+          <span className="pr-2">Copyright &copy; 2020 Brainstorm Inc.</span>{" "}
           All rights reserved.
         </div>
       </div>
