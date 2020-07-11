@@ -36,7 +36,7 @@ const HomeSearchBox = ({ currentRefinement, refine }) => (
 const CustomSearchBox = connectSearchBox(HomeSearchBox)
 
 const Hits = ({ hits }) => (
-  <ul class="pt-4">
+  <ul className="pt-4">
     {hits.slice(0, 6).map(hit => (
       <li key={hit.id}>
         <CollegeResult hit={hit} />
@@ -50,7 +50,7 @@ const CustomHits = connectHits(Hits)
 export const CollegeSearch = props => {
   return (
     <div className="container flex flex-col items-center text-center bg-blush h-full">
-      <h3 className="text-xl lg:text-3xl p-10 lg:max-w-xs lg:pt-24 font-bold text-primar">
+      <h3 className="text-xl lg:text-3xl p-10 lg:max-w-xs lg:pt-20 font-bold text-primar">
         Find your school's fall plans...
       </h3>
       <div className="container flex justify-center">

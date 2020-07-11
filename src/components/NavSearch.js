@@ -54,7 +54,7 @@ const HomeSearchBox = ({ currentRefinement, refine, setNavSearch }) => {
 const CustomSearchBox = connectSearchBox(HomeSearchBox)
 
 const Hits = ({ hits, setNavSearch }) => (
-  <ul class="pt-8 lg:mx-16 mx-10 border-t-2 border-gray-200">
+  <ul className="pt-8 lg:mx-16 mx-10 border-t-2 border-gray-200">
     {hits.slice(0, 10).map(hit => (
       <li key={hit.id}>
         <CollegeResultSearch setNavSearch={setNavSearch} hit={hit} />
