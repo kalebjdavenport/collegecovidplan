@@ -1,6 +1,6 @@
 # College COVID Plan
 
-<iframe width="1424" height="627" src="https://www.youtube.com/embed/2aWBypYUyJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://www.youtube.com/embed/2aWBypYUyJo)
 
 This project is a GatsbyJS site for university students to find their school's plans for the fall and spring. Users can type in the name of their school or find their schools' listing in the browser.
 
